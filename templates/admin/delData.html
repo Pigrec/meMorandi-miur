@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/main.css">
+        <script type="text/javascript" src="../static/script.js"></script>
+        
+        <title>meMorandi</title>
+    </head>
+    <body>
+        <header>
+            <img class="icon" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" title="Piattaforma"/>
+            
+            <div>
+                <h2><a href="../">meMorandi</a></h2>
+                <div>
+                    <img src="{{ url_for('static', filename='question-point.png') }}" onclick="credits()" class="icon"/>
+                    <a href="./login"><img src="{{ url_for('static', filename='user.png') }}" class="icon"/></a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <form action="/admin/conf" method="POST" id="deldata">
+                <h4>ELIMINARE un evento</h4><br>
+                <p style="color:white">Sono stati trovatii i seguenti eventi, selezionare l'id dell'evento che si desidera modificare.</p>
+                <p style="color:white">
+                    {{ dat[0] }} <br>
+                    {{ dat[1] }} <br>
+                    {{ dat[2] }} <br>
+                    {{ dat[3] }} <br>
+                    {{ dat[4] }} <br>
+                    {{ dat[5] }} <br>
+                    {{ dat[6] }} <br>
+                    {{ dat[7] }} <br>
+                    {{ dat[8] }} <br>
+                    {{ dat[9] }} <br>
+                    {{ dat[10] }} <br>
+                    {{ dat[11] }} <br>
+                    {{ dat[12] }} <br>
+                    {{ dat[13] }} <br>
+                    {{ dat[14] }}
+                </p>
+                <label for="id">Inserire l'ID dell'evento da ELIMINARE</label><br>
+                <input class="input" type="number" id="id" name="id" required><br>
+                
+                <input class="button" type="submit" value="Prosegui">
+            </form>
+
+        </section>
+    </body>
+</html>

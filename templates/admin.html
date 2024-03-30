@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/main.css">
+        <script type="text/javascript" src="../static/script.js"></script>
+        
+        <title>meMorandi</title>
+    </head>
+    <body>
+        <header>
+            <img class="icon" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" title="Piattaforma"/>
+            
+            <div>
+                <h2><a href="./">meMorandi</a></h2>
+                <div>
+                    <img src="{{ url_for('static', filename='question-point.png') }}" onclick="credits()" class="icon"/>
+                    <a href="./login"><img src="{{ url_for('static', filename='user.png') }}" class="icon"/></a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <form action="/mod" method="POST" id="mod">
+                <h4>Admin</h4><br>
+
+                <a href="./admin/del" style="color:blue;">Elimina un evento</a>
+                
+                <br><br>
+
+                <label for="nome">Nome evento *</label><br>
+                <input class="input" type="text" id="nome" name="nome" required><br>
+                
+                <label for="data">Data *</label><br>
+                <input class="input inverter" type="date" id="data" name="data" required><br>
+                
+                <label for="inizio">Orario di inizio *</label><br>
+                <input class="input inverter" type="time" id="inizio" name="inizio" required><br>
+
+                <label for="fine">Orario di fine *</label><br>
+                <input class="input inverter" type="time" id="fine" name="fine" required><br>
+                
+                <label for="dove">Dove</label><br>
+                <input class="input" type="text" id="dove" name="dove"><br>
+
+                <label for="note">Note</label><br>
+                <input class="input" type="text" id="note" name="note"><br>
+
+                
+                
+                <input class="button" type="submit" value="Invia">
+            </form>
+
+        </section>
+    </body>
+</html>

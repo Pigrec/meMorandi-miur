@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/main.css">
+        <script type="text/javascript" src="../static/script.js"></script>
+        
+        <title>meMorandi</title>
+    </head>
+    <body>
+        <header>
+            <img class="icon" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" title="Piattaforma"/>
+            
+            <div>
+                <h2><a href="./">meMorandi</a></h2>
+                <div>
+                    <img src="{{ url_for('static', filename='question-point.png') }}" onclick="credits()" class="icon"/>
+                    <a href="./login"><img src="{{ url_for('static', filename='user.png') }}" class="icon"/></a>
+                </div>
+            </div>
+        </header>
+
+        <article id="error-article">
+            <h3>Oops! {{ errore }}</h3>
+            <img id="error-img" src="../static/error.png" alt="un fantasma-gorico errore"> 
+            <a href="./"><p>Torna alla home page</p></a>
+        </article>
+        
+    </body>
+</html>

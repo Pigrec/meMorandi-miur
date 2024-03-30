@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/main.css">
+        <script type="text/javascript" src="../static/script.js"></script>
+        
+        <title>meMorandi</title>
+    </head>
+    <body>
+        <header>
+            <img class="icon" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" title="Piattaforma"/>
+            
+            <div>
+                <h2><a href="./">meMorandi</a></h2>
+                <div>
+                    <img src="{{ url_for('static', filename='question-point.png') }}" onclick="credits()" class="icon"/>
+                    <a href="./login"><img src="{{ url_for('static', filename='user.png') }}" class="icon"/></a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <article id="today">
+                <h3>Oggi ({{ oggi }})</h3>
+
+                <div class="today-div" style="display: {{ ee1 }};">
+                    <h4>{{ e1[1] }}</h4>
+                    <p><span>{{ e1[2] }} - {{ e1[3] }}</span> <br> {{ e1[4] }} <br> {{ e1[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee2 }};">
+                    <h4>{{ e2[1] }}</h4>
+                    <p><span>{{ e2[2] }} - {{ e2[3] }}</span> <br> {{ e2[4] }} <br> {{ e2[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee3 }};">
+                    <h4>{{ e3[1] }}</h4>
+                    <p><span>{{ e3[2] }} - {{ e3[3] }}</span> <br> {{ e3[4] }} <br> {{ e3[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee4 }};">
+                    <h4>{{ e4[1] }}</h4>
+                    <p><span>{{ e4[2] }} - {{ e4[3] }}</span> <br> {{ e4[4] }} <br> {{ e4[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee5 }};">
+                    <h4>{{ e5[1] }}</h4>
+                    <p><span>{{ e5[2] }} - {{ e5[3] }}</span> <br> {{ e5[4] }} <br> {{ e5[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee6 }};">
+                    <h4>{{ e6[1] }}</h4>
+                    <p><span>{{ e6[2] }} - {{ e6[3] }}</span> <br> {{ e6[4] }} <br> {{ e6[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee7 }};">
+                    <h4>{{ e7[1] }}</h4>
+                    <p><span>{{ e7[2] }} - {{ e7[3] }}</span> <br> {{ e7[4] }} <br> {{ e7[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee8 }};">
+                    <h4>{{ e8[1] }}</h4>
+                    <p><span>{{ e8[2] }} - {{ e8[3] }}</span> <br> {{ e8[4] }} <br> {{ e8[5] }}</p>
+                </div>
+                
+                <div class="today-div" style="display: {{ ee9 }};">
+                    <h4>{{ e9[1] }}</h4>
+                    <p><span>{{ e9[2] }} - {{ e9[3] }}</span> <br> {{ e9[4] }} <br> {{ e9[5] }}</p>
+                </div>
+            </article>
+
+            <article id="next-week">
+                <h3>Questa settimana</h3>
+
+                <table>
+                    <tr>
+                        <td class="time-table"></td>
+                        <th>Lunedì</th>
+                        <th>Martedì</th>
+                        <th>Mercoledì</th>
+                        <th>Giovedì</th>
+                        <th>Venerdì</th>
+                        <th>Sabato</th>
+                    </tr>
+                    <tr>
+                        <td class="time-table"></td>
+                        <td>{{ lun[0] }}<br>{{ lun[1] }}<br>{{ lun[2] }}<br>{{ lun[3] }}<br>{{ lun[4] }}<br>{{ lun[5] }}<br>{{ lun[6] }}<br>{{ lun[7] }}<br>{{ lun[8] }}</td>
+                        <td>{{ mar[0] }}<br>{{ mar[1] }}<br>{{ mar[2] }}<br>{{ mar[3] }}<br>{{ mar[4] }}<br>{{ mar[5] }}<br>{{ mar[6] }}<br>{{ mar[7] }}<br>{{ mar[8] }}</td>
+                        <td>{{ mer[0] }}<br>{{ mer[1] }}<br>{{ mer[2] }}<br>{{ mer[3] }}<br>{{ mer[4] }}<br>{{ mer[5] }}<br>{{ mer[6] }}<br>{{ mer[7] }}<br>{{ mer[8] }}</td>
+                        <td>{{ giov[0] }}<br>{{ giov[1] }}<br>{{ giov[2] }}<br>{{ giov[3] }}<br>{{ giov[4] }}<br>{{ giov[5] }}<br>{{ giov[6] }}<br>{{ giov[7] }}<br>{{ giov[8] }}</td>
+                        <td>{{ ven[0] }}<br>{{ ven[1] }}<br>{{ ven[2] }}<br>{{ ven[3] }}<br>{{ ven[4] }}<br>{{ ven[5] }}<br>{{ ven[6] }}<br>{{ ven[7] }}<br>{{ ven[8] }}</td>
+                        <td>{{ sab[0] }}<br>{{ sab[1] }}<br>{{ sab[2] }}<br>{{ sab[3] }}<br>{{ sab[4] }}<br>{{ sab[5] }}<br>{{ sab[6] }}<br>{{ sab[7] }}<br>{{ sab[8] }}</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </body>
+</html>
